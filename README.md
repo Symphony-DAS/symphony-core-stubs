@@ -1,6 +1,6 @@
 # Symphony Core Stubs
 
-Stubs for the Symphony data acquisition core framework. Simulates just enough of the core framework to enable stimulus regeneration on non-Windows systems.
+Symphony data acquisition core framework stubs. Simulates just enough of the core framework to enable stimulus regeneration on non-Windows systems.
 
 ## License
 
