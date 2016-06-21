@@ -20,16 +20,13 @@ classdef Array < handle
             obj.ItemType = itemType;
         end
         
-        
         function s = size(obj)
             s = size(obj.Items);
         end
         
-        
         function n = numel(obj)
             n = numel(obj.Items);
         end
-        
         
         function obj = subsasgn(obj, s, val)
             % TODO: make sure val is compatible with obj.ItemType?
@@ -57,7 +54,6 @@ classdef Array < handle
                     error('NETArray:subsasgn', 'Not a supported subscripted assignment')
             end     
         end
-    
         
         function sref = subsref(obj,s)
             switch s(1).type
@@ -79,4 +75,5 @@ classdef Array < handle
         end
         
     end
+    
 end

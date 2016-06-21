@@ -6,7 +6,6 @@ classdef AggregateException < System.Exception
             obj = obj@System.Exception(message);
         end
         
-        
         function e = Flatten(obj)
             e = obj;
         end

@@ -7,7 +7,6 @@ classdef Enumerable < handle
             list = source;
         end
         
-        
         function first = First(source)
             e = source.GetEnumerator();
             

@@ -23,16 +23,13 @@ classdef Stimulus < handle
             obj.Position = System.TimeSpan.Zero;
         end
         
-        
         function DidOutputData(obj, outputTime, timeSpan, config)
             obj.Position = obj.Position + timeSpan;
-        end
-                            
+        end              
             
         function tf = get.IsComplete(obj)
             tf = obj.Duration ~= Symphony.Core.TimeSpanOption.Indefinite && obj.Position >= obj.Duration;
         end
-        
         
         function r = isequal(a, b)
             if a == b

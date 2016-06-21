@@ -15,17 +15,14 @@ classdef Queue < handle
             obj.Count = 0;
         end
         
-        
         function Enqueue(obj, item)
             obj.Items{end + 1} = item;
             obj.Count = obj.Count + 1;
         end
         
-        
         function i = Peek(obj)
             i = obj.Items{1};
         end
-        
         
         function i = Dequeue(obj)
             i = obj.Items{1};
@@ -33,12 +30,10 @@ classdef Queue < handle
             obj.Count = obj.Count - 1;
         end
         
-        
         function Clear(obj)
             obj.Items = cell(0);
             obj.Count = 0;
         end
-        
         
         function enum = GetEnumerator(obj)
             enum = Enumerator(@MoveNext);

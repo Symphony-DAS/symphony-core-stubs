@@ -18,7 +18,6 @@ classdef RenderedStimulus < Symphony.Core.Stimulus
             obj.SampleRate = data.SampleRate;
         end
         
-        
         function enumerable = DataBlocks(obj, blockDuration)
             enumerable = Enumerable(@GetEnumerator);
             

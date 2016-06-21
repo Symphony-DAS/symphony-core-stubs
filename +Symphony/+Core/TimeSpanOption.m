@@ -35,11 +35,9 @@ classdef (InferiorClasses = {?System.TimeSpan}) TimeSpanOption < handle
             r = a.Item2 - b.Item2;
         end
         
-        
         function r = ne(a, b)
             r = ~eq(a, b);
         end
-        
         
         function r = plus(a, b)
             a = Symphony.Core.TimeSpanOption(a);
@@ -48,14 +46,12 @@ classdef (InferiorClasses = {?System.TimeSpan}) TimeSpanOption < handle
             r = a.Item2 + b.Item2;
         end
         
-        
         function r = lt(a, b)
             a = Symphony.Core.TimeSpanOption(a);
             b = Symphony.Core.TimeSpanOption(b);
             
             r = a.Item2 < b.Item2;
         end
-        
         
         function r = le(a, b)
             a = Symphony.Core.TimeSpanOption(a);
@@ -64,7 +60,6 @@ classdef (InferiorClasses = {?System.TimeSpan}) TimeSpanOption < handle
             r = a.Item2 <= b.Item2;
         end
         
-        
         function r = eq(a, b)
             a = Symphony.Core.TimeSpanOption(a);
             b = Symphony.Core.TimeSpanOption(b);
@@ -72,11 +67,9 @@ classdef (InferiorClasses = {?System.TimeSpan}) TimeSpanOption < handle
             r = (~a.Item1 && ~b.Item1) || isequal(a, b);
         end
         
-        
         function tf = Equals(a, b)
             tf = eq(a, b);
         end
-        
         
         function r = gt(a, b)
             a = Symphony.Core.TimeSpanOption(a);
@@ -84,7 +77,6 @@ classdef (InferiorClasses = {?System.TimeSpan}) TimeSpanOption < handle
             
             r = a.Item2 > b.Item2;
         end
-        
         
         function r = ge(a, b)
             a = Symphony.Core.TimeSpanOption(a);

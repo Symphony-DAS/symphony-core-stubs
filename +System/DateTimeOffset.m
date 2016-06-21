@@ -18,7 +18,6 @@ classdef DateTimeOffset
             obj.DateTime = dateTime;
         end
         
-        
         function s = ToString(obj)
             tz = java.util.TimeZone.getDefault();
             tzOffset = tz.getOffset(obj.DateTime);
@@ -30,4 +29,5 @@ classdef DateTimeOffset
         end
         
     end
+    
 end

@@ -17,7 +17,6 @@ classdef SortedList < handle
             obj.Values = System.Collections.ArrayList();
         end
         
-        
         function Add(obj, key, value)
             if obj.Keys.Contains(key)
                 error('Key already exists');
@@ -26,7 +25,6 @@ classdef SortedList < handle
             obj.Keys.Add(key);
             obj.Values.Add(value);
         end
-        
         
         function tf = Remove(obj, key)
             if ~obj.Keys.Contains(key)
@@ -38,7 +36,6 @@ classdef SortedList < handle
             obj.Keys.RemoveAt(i);
             obj.Values.RemoveAt(i);
         end
-        
         
         function i = Item(obj, key, value)
             index = obj.Keys.IndexOf(key);
@@ -60,22 +57,18 @@ classdef SortedList < handle
             end
         end
         
-        
         function c = ContainsKey(obj, key)
             c = obj.Keys.Contains(key);
         end
         
-        
         function c = get.Count(obj)
             c = obj.Keys.Count;
         end
-
         
         function Clear(obj)
             obj.Keys.Clear();
             obj.Values.Clear();
         end
-        
         
         function enum = GetEnumerator(obj)
             enum = Enumerator(@MoveNext);

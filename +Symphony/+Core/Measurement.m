@@ -43,17 +43,14 @@ classdef Measurement < handle
             end
         end
         
-        
         function q = QuantityInBaseUnit(obj)
             q = obj.Quantity * 10 ^ obj.Exponent;
         end
-        
         
         function du = get.DisplayUnit(obj)
             expInd = Symphony.Core.Measurement.BaseExps == obj.Exponent;
             du = [Symphony.Core.Measurement.BaseUnits{expInd} obj.BaseUnit];
         end
-        
         
         function tf = Equals(obj, other)
             tf = strcmp(obj.BaseUnit, other.BaseUnit) && obj.QuantityInBaseUnit == other.QuantityInBaseUnit;
@@ -70,7 +67,6 @@ classdef Measurement < handle
             m = Symphony.Core.MeasurementList(array, exponent, baseUnit);
         end
         
-        
         function a = ToQuantityArray(list)
             if isa(list, 'Symphony.Core.MeasurementList')
                 a = Symphony.Core.MeasurementList.ToQuantityArray(list);
@@ -82,7 +78,6 @@ classdef Measurement < handle
                 a(i) = list.Item(i-1).Quantity;
             end
         end
-        
         
         function a = ToBaseUnitQuantityArray(list)
             if isa(list, 'Symphony.Core.MeasurementList')
@@ -96,7 +91,6 @@ classdef Measurement < handle
             end
         end
         
-        
         function u = HomogenousBaseUnits(list)
             if isa(list, 'Symphony.Core.MeasurementList')
                 u = Symphony.Core.MeasurementList.HomogenousBaseUnits(list);
@@ -105,7 +99,6 @@ classdef Measurement < handle
             
             u = list.Item(0).BaseUnit;
         end
-        
         
         function u = HomogenousDisplayUnits(list)
             if isa(list, 'Symphony.Core.MeasurementList')

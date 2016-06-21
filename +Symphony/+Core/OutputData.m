@@ -16,7 +16,6 @@ classdef OutputData < Symphony.Core.IOData
             end
         end
         
-        
         function [head, rest] = SplitData(obj, duration)
             if duration.Ticks == 0
                 requestedSamples = 0;
@@ -32,7 +31,6 @@ classdef OutputData < Symphony.Core.IOData
             head = Symphony.Core.OutputData(headData, obj.SampleRate, obj.IsLast);
             rest = Symphony.Core.OutputData(restData, obj.SampleRate, obj.IsLast);
         end
-        
         
         function d = Concat(obj, other)
             if ~isequal(obj.SampleRate, other.SampleRate)

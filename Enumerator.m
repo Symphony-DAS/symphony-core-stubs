@@ -17,7 +17,6 @@ classdef Enumerator < handle
             obj.moveNextFunc = moveNextFunc;
         end
         
-        
         function b = MoveNext(obj)
             b = obj.moveNextFunc();
         end

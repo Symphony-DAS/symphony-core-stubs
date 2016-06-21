@@ -25,7 +25,6 @@ classdef CombinedStimulus < Symphony.Core.Stimulus
             obj.Combine = combine;
         end
         
-        
         function enumerable = DataBlocks(obj, blockDuration)
             enumerable = Enumerable(@GetEnumerator);
             
@@ -66,6 +65,7 @@ classdef CombinedStimulus < Symphony.Core.Stimulus
                     tf = true;
                 end
             end
+            
         end
         
     end
@@ -108,7 +108,6 @@ classdef CombinedStimulus < Symphony.Core.Stimulus
                 end
             end
         end
-        
         
         function parameters = CombineParameters(stimuli)
             parameters = NET.createGeneric('System.Collections.Generic.Dictionary', ...

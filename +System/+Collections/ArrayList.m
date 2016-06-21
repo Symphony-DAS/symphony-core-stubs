@@ -22,18 +22,15 @@ classdef ArrayList < handle
             obj.Capacity = capacity;
         end
         
-        
         function Add(obj, item)
             obj.ItemCount = obj.ItemCount + 1;
             obj.Items{obj.ItemCount} = item;
         end
         
-        
         function AddRange(obj, list)
             obj.Items = [obj.Items(1:obj.ItemCount) list.Items];
             obj.ItemCount = obj.ItemCount + list.ItemCount;
         end
-        
         
         function Remove(obj, item)
             i = obj.IndexOf(item);
@@ -41,12 +38,10 @@ classdef ArrayList < handle
             obj.RemoveAt(i);
         end
         
-        
         function RemoveAt(obj, index)
             obj.Items(index + 1) = [];
             obj.ItemCount = obj.ItemCount - 1;
         end
-        
         
         function i = Item(obj, index, value)
             if index < 0 || index >= obj.ItemCount
@@ -60,17 +55,14 @@ classdef ArrayList < handle
             i = obj.Items{index + 1};   % index is zero based
         end
         
-        
         function c = get.Count(obj)
             c = obj.ItemCount;
         end
-        
         
         function Clear(obj)
             obj.Items = cell(1, obj.Capacity);
             obj.ItemCount = 0;
         end
-        
         
         function i = IndexOf(obj, item)
             i = find(cellfun(@(c)isequal(c, item), obj.Items), 1, 'first');
@@ -82,11 +74,9 @@ classdef ArrayList < handle
             end
         end
         
-        
         function b = Contains(obj, item)
             b = obj.IndexOf(item) ~= -1;
         end
-        
         
         function enum = GetEnumerator(obj)
             enum = Enumerator(@MoveNext);

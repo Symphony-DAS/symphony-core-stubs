@@ -25,7 +25,6 @@ classdef MeasurementList < handle
             obj.BaseUnit = baseUnit;
         end
         
-        
         function AddRange(obj, list)
             if ~strcmp(obj.BaseUnit, list.BaseUnit)
                 error('Unit mismatch');
@@ -37,11 +36,9 @@ classdef MeasurementList < handle
             obj.ItemCount = obj.ItemCount + list.ItemCount;
         end
         
-        
         function c = get.Count(obj)
             c = obj.ItemCount;
         end
-        
         
         function l = Concat(obj, other)
             if ~strcmp(obj.BaseUnit, other.BaseUnit)
@@ -53,11 +50,9 @@ classdef MeasurementList < handle
             l = Symphony.Core.MeasurementList([obj.Items(1:obj.ItemCount) otherItems], obj.Exponent, obj.BaseUnit);
         end
         
-        
         function l = Take(obj, count)
             l = Symphony.Core.MeasurementList(obj.Items(1:count), obj.Exponent, obj.BaseUnit);
         end
-        
         
         function l = Skip(obj, count)
             l = Symphony.Core.MeasurementList(obj.Items(count+1:end), obj.Exponent, obj.BaseUnit);
@@ -71,16 +66,13 @@ classdef MeasurementList < handle
             a = list.Items;
         end
         
-        
         function a = ToBaseUnitQuantityArray(list)
             a = list.Items * 10 ^ list.Exponent;
         end
         
-        
         function u = HomogenousBaseUnits(list)
             u = list.BaseUnit;
         end
-        
         
         function u = HomogenousDisplayUnits(list)
             m = Symphony.Core.Measurement([], list.Exponent, list.BaseUnit);

@@ -12,7 +12,6 @@ classdef Enumerable < handle
             obj.getEnumeratorFunc = getEnumeratorFunc;
         end
         
-        
         function e = GetEnumerator(obj)
             e = obj.getEnumeratorFunc();
         end
