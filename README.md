@@ -4,4 +4,4 @@ Symphony data acquisition core framework stubs. Simulates just enough of the cor
 
 ## License
 
-Symphony is licensed under the [MIT License](https://opensource.org/licenses/MIT), which is an [open source license](https://opensource.org/docs/osd).
+Licensed under the [MIT License](https://opensource.org/licenses/MIT), which is an [open source license](https://opensource.org/docs/osd).
