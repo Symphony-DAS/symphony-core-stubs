@@ -1,6 +1,5 @@
-% A substitute for an IEnumerable implementation.
-
 classdef Enumerable < handle
+    % A substitute for an IEnumerable implementation.
     
     properties (Access = private)
         getEnumeratorFunc

@@ -1,7 +1,6 @@
-% Note that this implementation doesn't actually type check for simplicity's sake.
-
 classdef Dictionary < handle
-   
+    % Note that this implementation doesn't actually type check for simplicity's sake.
+    
     properties (SetAccess = private)
         Types
         Keys

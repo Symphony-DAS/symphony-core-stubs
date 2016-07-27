@@ -1,6 +1,5 @@
-% A substitute for an IEnumerator implementation.
-
 classdef Enumerator < handle
+    % A substitute for an IEnumerator implementation.
     
     properties
         Current

@@ -1,6 +1,5 @@
-% A stub class to support MATLAB style arrays of .NET types.
-
 classdef Array < handle
+    % A stub class to support MATLAB style arrays of .NET types.
     
     properties (Access = private)
         Items

@@ -1,7 +1,6 @@
-% This class does not actually exist in the core. It is a workaround for MATLAB's slow instantiation of large lists 
-% of Measurements.
-
 classdef MeasurementList < handle
+    % This class does not actually exist in the core. It is a workaround for MATLAB's slow instantiation of large lists 
+    % of Measurements.
     
     properties (SetAccess = private)
         Count
