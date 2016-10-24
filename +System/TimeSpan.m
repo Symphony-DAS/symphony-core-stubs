@@ -68,6 +68,10 @@ classdef TimeSpan
             obj = System.TimeSpan.FromSeconds(ms * 1e-3);
         end
         
+        function obj = FromTicks(ticks)
+            obj = System.TimeSpan(ticks);
+        end
+        
     end
     
 end
